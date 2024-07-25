@@ -8,6 +8,7 @@ This project is a Markdown Generator API that simplifies the process of creating
 
 - [Installation](#installation)
 - [Usage](#usage)
+- [DemoVideo](#demovideo)
 - [Credits](#credits)
 - [License](#license)
 - [Badges](#badges)
@@ -17,10 +18,11 @@ This project is a Markdown Generator API that simplifies the process of creating
 
 ## Installation
 
-1. Clone the repository.
+1. Clone the repository from my [github](https://github.com/adminchatter).
     ```bash
     git clone git@github.com:AdminChatter/ProfessionalREADMEGenerator.git
     ```
+    ![clone link](./assets/img/Demo3.PNG)<br><br>
 
 2. Navigate to the project directory.
     ```bash
@@ -31,11 +33,14 @@ This project is a Markdown Generator API that simplifies the process of creating
     ```bash
     npm install
     ```
+    ![clone link](./assets/img/Demo4.PNG) <br><br>
 
-4. Run the Application
+4. Run the Application in the integrated terminal
     ```bash
     npm start
     ```
+
+    ![clone link](./assets/img/Demo1.PNG)<br><br>
 
 ## Usage
 
@@ -45,6 +50,13 @@ This project is a Markdown Generator API that simplifies the process of creating
     ```
 
 2. Answer the prompts to generate your README file.
+
+![clone link](./assets/img/Demo2.PNG)
+
+## DemoVideo
+
+There is a demostration video in [youtube](https://youtu.be/nQZLaSolYPs)
+
 
 ## Credits
 
