@@ -44,8 +44,6 @@ function renderLicenseBadge(license) {
       return "![License: MS-PL](https://img.shields.io/badge/License-MS--PL-blue)";
     case "MS-RL":
       return "![License: MS-RL](https://img.shields.io/badge/License-MS--RL-blue)";
-    case "MIT":
-      return "![License: MIT](https://img.shields.io/badge/License-MIT-blue)";
     case "MPL-2.0":
       return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL--2.0-blue)";
     case "NCSA":
@@ -64,7 +62,6 @@ function renderLicenseBadge(license) {
       return "";
   }
 }
-
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -130,8 +127,6 @@ function renderLicenseLink(license) {
       return "";
   }
 }
-
-
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
