@@ -35,19 +35,19 @@ This project is a Markdown Generator API that simplifies the process of creating
     ```
     ![clone link](./assets/img/Demo4.PNG) <br><br>
 
-4. Run the Application in the integrated terminal
+4. Run the Application
+    ```bash
+    npm start
+    ```
+
+## Usage
+
+1. Run the application in the integrated terminal.
     ```bash
     npm start
     ```
 
     ![clone link](./assets/img/Demo1.PNG)<br><br>
-
-## Usage
-
-1. Run the application.
-    ```bash
-    npm start
-    ```
 
 2. Answer the prompts to generate your README file.
 
