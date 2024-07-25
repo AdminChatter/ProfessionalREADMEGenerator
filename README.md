@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a Markdown Generator API that simplifies the process of creating professional README files for your projects. By answering a series of prompts, users can quickly generate a comprehensive README file.
+This project is a Markdown Generator API that simplifies the process of creating professional README files for your projects. By answering a series of prompts, users can quickly generate a comprehensive README file. The output file can be find in output folder
 
 ## Table of Contents
 

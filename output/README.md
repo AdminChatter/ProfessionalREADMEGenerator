@@ -1,8 +1,8 @@
-# Banana
+# banana
 
 ## Description
 
-Zookeeper and animals are fighting for bananas
+we love banana
 
 ## Table of Contents
 
@@ -16,11 +16,11 @@ Zookeeper and animals are fighting for bananas
 
 ## Installation
 
-Buy some bananas
+buy banana
 
 ## Usage
 
-track the usage of bananas
+eating banana
 
 ## Credits
 
@@ -31,17 +31,17 @@ If you have any questions, please contact me at xiangzhenwu.dev@gmail.com <br>
 
 ## License
 
-This project is licensed under the **[AFL-3.0](https://opensource.org/licenses/AFL-3.0)** license. <br>Click the license above to learn more about this license. <br>
+This project is licensed under the **[MIT](https://opensource.org/licenses/MIT)** license. <br>Click the license above to learn more about this license. <br>
 
 
 ## Badges
 
-![License: AFL 3.0](https://img.shields.io/badge/License-AFL--3.0-blue)
+![License: MIT](https://img.shields.io/badge/License-MIT-blue)
 
 ## How to Contribute
 
-bananas donation will help
+donate banana to Leif
 
 ## Tests
 
-no specific test current
+throw the banana to test
