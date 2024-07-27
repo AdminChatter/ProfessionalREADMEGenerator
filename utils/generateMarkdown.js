@@ -55,8 +55,8 @@ function generateMarkdown(data) {
   ## License
 [${data.license}](${renderLicenseLink(data.license)}) license is a short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 ## Badge
-![${data.license}](${renderLicenseBadge(data.license)}
-`
+![${data.license}](${renderLicenseBadge(data.license)})
+`;
 }
 //export module
 export default generateMarkdown;
