@@ -1,65 +1,74 @@
+// Description: This file contains the generateMarkdown function that generates the markdown for the README file. The function takes in the data object from the user's responses to the inquirer prompts and returns a markdown template literal with the user's input interpolated into the template. The function also includes helper functions to generate the license badge, link, and section based on the user's selected license.
+
 // Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
-  switch (license) {
-    case "MIT":
-      return "![License: MIT](https://img.shields.io/badge/License-MIT-blue)";
-    case "AFL-3.0":
-      return "![License: AFL 3.0](https://img.shields.io/badge/License-AFL--3.0-blue)";
-    case "Apache-2.0":
-      return "![License: Apache](https://img.shields.io/badge/License-Apache--2.0-blue)";
-    case "Artistic-2.0":
-      return "![License: Artistic](https://img.shields.io/badge/License-Artistic--2.0-blue)";
-    case "BSL-1.0":
-      return "![License: BSL 1.0](https://img.shields.io/badge/License-BSL--1.0-blue)";
-    case "BSD-2-Clause":
-      return "![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD--2--Clause-blue)";
-    case "BSD-3-Clause":
-      return "![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue)";
-    case "CC":
-      return "![License: Creative Commons](https://img.shields.io/badge/License-CC-blue)";
-    case "CC0-1.0":
-      return "![License: CC0 1.0](https://img.shields.io/badge/License-CC0--1.0-blue)";
-    case "ECL-2.0":
-      return "![License: ECL 2.0](https://img.shields.io/badge/License-ECL--2.0-blue)";
-    case "EPL-1.0":
-      return "![License: EPL 1.0](https://img.shields.io/badge/License-EPL--1.0-blue)";
-    case "EPL-2.0":
-      return "![License: EPL 2.0](https://img.shields.io/badge/License-EPL--2.0-blue)";
-    case "EUPL-1.1":
-      return "![License: EUPL 1.1](https://img.shields.io/badge/License-EUPL--1.1-blue)";
-    case "GPL-2.0":
-      return "![License: GPL 2.0](https://img.shields.io/badge/License-GPL--2.0-blue)";
-    case "GPL-3.0":
-      return "![License: GPL 3.0](https://img.shields.io/badge/License-GPL--3.0-blue)";
-    case "LGPL-2.1":
-      return "![License: LGPL 2.1](https://img.shields.io/badge/License-LGPL--2.1-blue)";
-    case "LGPL-3.0":
-      return "![License: LGPL 3.0](https://img.shields.io/badge/License-LGPL--3.0-blue)";
-    case "ISC":
-      return "![License: ISC](https://img.shields.io/badge/License-ISC-blue)";
-    case "LPPL-1.3c":
-      return "![License: LPPL 1.3c](https://img.shields.io/badge/License-LPPL--1.3c-blue)";
-    case "MS-PL":
-      return "![License: MS-PL](https://img.shields.io/badge/License-MS--PL-blue)";
-    case "MS-RL":
-      return "![License: MS-RL](https://img.shields.io/badge/License-MS--RL-blue)";
-    case "MPL-2.0":
-      return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL--2.0-blue)";
-    case "NCSA":
-      return "![License: NCSA](https://img.shields.io/badge/License-NCSA-blue)";
-    case "OFL-1.1":
-      return "![License: OFL 1.1](https://img.shields.io/badge/License-OFL--1.1-blue)";
-    case "OSL-3.0":
-      return "![License: OSL 3.0](https://img.shields.io/badge/License-OSL--3.0-blue)";
-    case "PostgreSQL":
-      return "![License: PostgreSQL](https://img.shields.io/badge/License-PostgreSQL-blue)";
-    case "Unlicense":
-      return "![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue)";
-    case "Zlib":
-      return "![License: Zlib](https://img.shields.io/badge/License-Zlib-blue)";
-    default:
-      return "";
+  // switch (license) {
+  //   case "MIT":
+  //     return "![License: MIT](https://img.shields.io/badge/License-MIT-blue)";
+  //   case "AFL-3.0":
+  //     return "![License: AFL 3.0](https://img.shields.io/badge/License-AFL--3.0-blue)";
+  //   case "Apache-2.0":
+  //     return "![License: Apache](https://img.shields.io/badge/License-Apache--2.0-blue)";
+  //   case "Artistic-2.0":
+  //     return "![License: Artistic](https://img.shields.io/badge/License-Artistic--2.0-blue)";
+  //   case "BSL-1.0":
+  //     return "![License: BSL 1.0](https://img.shields.io/badge/License-BSL--1.0-blue)";
+  //   case "BSD-2-Clause":
+  //     return "![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD--2--Clause-blue)";
+  //   case "BSD-3-Clause":
+  //     return "![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD--3--Clause-blue)";
+  //   case "CC":
+  //     return "![License: Creative Commons](https://img.shields.io/badge/License-CC-blue)";
+  //   case "CC0-1.0":
+  //     return "![License: CC0 1.0](https://img.shields.io/badge/License-CC0--1.0-blue)";
+  //   case "ECL-2.0":
+  //     return "![License: ECL 2.0](https://img.shields.io/badge/License-ECL--2.0-blue)";
+  //   case "EPL-1.0":
+  //     return "![License: EPL 1.0](https://img.shields.io/badge/License-EPL--1.0-blue)";
+  //   case "EPL-2.0":
+  //     return "![License: EPL 2.0](https://img.shields.io/badge/License-EPL--2.0-blue)";
+  //   case "EUPL-1.1":
+  //     return "![License: EUPL 1.1](https://img.shields.io/badge/License-EUPL--1.1-blue)";
+  //   case "GPL-2.0":
+  //     return "![License: GPL 2.0](https://img.shields.io/badge/License-GPL--2.0-blue)";
+  //   case "GPL-3.0":
+  //     return "![License: GPL 3.0](https://img.shields.io/badge/License-GPL--3.0-blue)";
+  //   case "LGPL-2.1":
+  //     return "![License: LGPL 2.1](https://img.shields.io/badge/License-LGPL--2.1-blue)";
+  //   case "LGPL-3.0":
+  //     return "![License: LGPL 3.0](https://img.shields.io/badge/License-LGPL--3.0-blue)";
+  //   case "ISC":
+  //     return "![License: ISC](https://img.shields.io/badge/License-ISC-blue)";
+  //   case "LPPL-1.3c":
+  //     return "![License: LPPL 1.3c](https://img.shields.io/badge/License-LPPL--1.3c-blue)";
+  //   case "MS-PL":
+  //     return "![License: MS-PL](https://img.shields.io/badge/License-MS--PL-blue)";
+  //   case "MS-RL":
+  //     return "![License: MS-RL](https://img.shields.io/badge/License-MS--RL-blue)";
+  //   case "MPL-2.0":
+  //     return "![License: MPL 2.0](https://img.shields.io/badge/License-MPL--2.0-blue)";
+  //   case "NCSA":
+  //     return "![License: NCSA](https://img.shields.io/badge/License-NCSA-blue)";
+  //   case "OFL-1.1":
+  //     return "![License: OFL 1.1](https://img.shields.io/badge/License-OFL--1.1-blue)";
+  //   case "OSL-3.0":
+  //     return "![License: OSL 3.0](https://img.shields.io/badge/License-OSL--3.0-blue)";
+  //   case "PostgreSQL":
+  //     return "![License: PostgreSQL](https://img.shields.io/badge/License-PostgreSQL-blue)";
+  //   case "Unlicense":
+  //     return "![License: Unlicense](https://img.shields.io/badge/License-Unlicense-blue)";
+  //   case "Zlib":
+  //     return "![License: Zlib](https://img.shields.io/badge/License-Zlib-blue)";
+  //   default:
+  //     return "";
+  // }
+  if (license) {
+    let licenseLink = license.split(' ').join('%20');
+    licenseLink = licenseLink.split('-').join('--');
+    return `![License](https://img.shields.io/badge/License-${licenseLink}-blue)`;
+  } else {
+    return '';
   }
 }
 
